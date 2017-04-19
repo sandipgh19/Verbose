@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="com.example.sandipghosh.verbose.MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -15,7 +16,7 @@
             android:id="@+id/toolbar"
             android:elevation="0dp"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="70dp"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
@@ -25,16 +26,20 @@
         android:id="@+id/scrollViewLogin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="53dp">
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/white">
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/white">
 
             <TextView
+                android:id="@+id/logotext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
+                android:layout_marginLeft="110dp"
                 android:layout_marginTop="60dp"
                 android:text="LOGIN AS SELLER"
                 android:textColor="@color/black"
@@ -42,10 +47,10 @@
                 android:textStyle="bold" />
 
             <FrameLayout
-                android:layout_width="150dp"
+                android:layout_width="155dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:layout_marginLeft="130dp"
+                android:layout_marginLeft="115dp"
                 android:layout_marginTop="90dp"
                 android:background="@drawable/line">
 
@@ -84,15 +89,16 @@
                 android:inputType="textPassword" />
 
             <Button
+                android:id="@+id/login"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="270dp"
                 android:background="@drawable/button"
                 android:text="SIGN IN"
-                android:textSize="25dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="25dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -103,39 +109,41 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="105dp"
-                    android:alpha=".7"
-                    android:text="Forget your "
-                    android:textColor="@color/text_color"
-                    android:textSize="15dp"
+                    android:alpha=".5"
+                    android:text="Forgot your "
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Password?"
+                    android:text="password?"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="15dp"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="190dp"
+                android:layout_marginLeft="175dp"
                 android:layout_marginTop="400dp"
                 android:text="OR"
                 android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="140dp"
+                android:layout_marginLeft="120dp"
                 android:layout_marginTop="450dp"
-                android:text="Continue with"
-                android:textColor="@color/text_color"
-                android:textSize="20dp" />
+                android:alpha=".5"
+                android:text="Countinue with"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -144,6 +152,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
+                    android:id="@+id/facebook"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="30dp"
@@ -152,6 +161,7 @@
                     android:src="@drawable/facebook" />
 
                 <ImageButton
+                    android:id="@+id/google"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
@@ -169,14 +179,17 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:alpha=".5"
                     android:text="Don't have an account?"
-                    android:textColor="@color/text_color"
+                    android:textColor="@color/black"
                     android:textSize="15dp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/register"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"

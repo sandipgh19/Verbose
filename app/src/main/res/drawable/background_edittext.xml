@@ -2,9 +2,13 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:state_focused="true">
         <shape >
-            <solid android:color="#8C8989" />
+            <solid android:color="#F7F8F9" />
         </shape>
     </item>
     <item android:state_window_focused="false">
+
+        <shape>
+            <solid android:color="#F7F8F9" />
+        </shape>
     </item>
 </selector>
