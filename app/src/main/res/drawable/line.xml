@@ -3,6 +3,6 @@
 <shape
     android:shape="line"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke android:width="5dp" android:color="@color/yellow"/>
-    <size android:height="5dp" />
+    <stroke android:width="3dp" android:color="@color/yellow"/>
+    <size android:height="3dp" />
 </shape>
