@@ -12,13 +12,9 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:elevation="0dp"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <include
+            layout="@layout/activity_toolbar"
+            android:id="@+id/toolbar"/>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -35,54 +31,60 @@
             android:layout_height="wrap_content"
             android:background="@color/white">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp">
+
             <TextView
                 android:id="@+id/logotext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="110dp"
-                android:layout_marginTop="60dp"
                 android:text="LOGIN AS SELLER"
+                android:gravity="center"
+                android:layout_weight="1"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
+            </LinearLayout>
+
 
             <FrameLayout
-                android:layout_width="155dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="115dp"
-                android:layout_marginTop="90dp"
-                android:background="@drawable/line">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp">
+
+                <ImageView
+                    android:layout_width="155dp"
+                    android:layout_height="5dp"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="1.5dp"
-                    android:layout_marginTop="0dp"
-                    android:background="@color/white"
-                    android:typeface="normal" />
+                    android:background="@null"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line"/>
             </FrameLayout>
 
             <EditText
                 style="@style/AppTheme.EditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="140dp"
                 android:drawableLeft="@drawable/name"
                 android:drawablePadding="10dp"
                 android:hint="Email Address"
+                android:fitsSystemWindows="true"
                 android:inputType="textEmailAddress" />
 
             <EditText
                 style="@style/AppTheme.EditText.PasswordField"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="205dp"
                 android:drawableLeft="@drawable/password"
                 android:drawablePadding="10dp"
                 android:hint="Password"
@@ -94,79 +96,99 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="270dp"
+                android:layout_marginTop="280dp"
                 android:background="@drawable/button"
                 android:text="SIGN IN"
                 android:textColor="@color/white"
-                android:textSize="25dp" />
+                android:textSize="22dp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="340dp">
+                android:layout_marginTop="350dp"
+                android:layout_gravity="center|top">
 
                 <TextView
+                    android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="105dp"
-                    android:alpha=".5"
+                    android:layout_marginLeft="115dp"
+                    android:alpha=".4"
                     android:text="Forgot your "
                     android:textColor="@color/black"
-                    android:textSize="18dp"
+                    android:textSize="15dp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/text2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="password?"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="18dp"
+                    android:textSize="15dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="175dp"
-                android:layout_marginTop="400dp"
-                android:text="OR"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:layout_marginTop="400dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
-                android:layout_marginTop="450dp"
-                android:alpha=".5"
-                android:text="Countinue with"
+                android:alpha=".8"
+                android:text="OR"
+                android:gravity="center"
+                android:layout_weight="1"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="500dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="450dp">
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:alpha=".4"
+                android:text="Countinue with"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="490dp"
                 android:orientation="horizontal">
 
                 <ImageButton
                     android:id="@+id/facebook"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="30dp"
+                    android:layout_weight=".5"
                     android:background="@null"
                     android:scaleType="fitXY"
                     android:src="@drawable/facebook" />
 
                 <ImageButton
                     android:id="@+id/google"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:layout_weight=".5"
+                    android:layout_gravity="right"
                     android:background="@null"
-                    android:paddingLeft="10dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/google" />
             </LinearLayout>
@@ -174,26 +196,27 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="580dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="575dp"
+                android:layout_gravity="center|top"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/text1"
+                    android:id="@+id/text4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:alpha=".5"
+                    android:alpha=".4"
                     android:text="Don't have an account?"
                     android:textColor="@color/black"
                     android:textSize="15dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/register"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Register Now"
+                    android:text="Register now"
                     android:textColor="@color/colorPrimary"
                     android:textSize="15dp"
                     android:textStyle="bold" />

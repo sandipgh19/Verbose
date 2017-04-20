@@ -3,9 +3,13 @@ package com.example.sandipghosh.verbose;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,10 +23,18 @@ public class BuyerRegistration extends AppCompatActivity implements View.OnClick
     Button register;
     TextView login;
 
+    ImageButton imgButton;
+    TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buyer_registration);
+
+        imgButton = (ImageButton) findViewById(R.id.back);
+        imgButton.setOnClickListener(this);
+        textView = (TextView) findViewById(R.id.tooltext);
+        textView.setText("Register");
 
         name = (EditText) findViewById(R.id.name);
         email = (EditText) findViewById(R.id.email);
@@ -51,6 +63,26 @@ public class BuyerRegistration extends AppCompatActivity implements View.OnClick
         } else if(id == R.id.register) {
 
             Toast.makeText(this,"Register",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this,Verification.class);
+            startActivity(intent);
+        } else if (id == R.id.back) {
+            finish();
         }
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return true;
+    }
 }
+

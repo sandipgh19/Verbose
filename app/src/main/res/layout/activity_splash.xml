@@ -2,50 +2,86 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="0dp">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="360dp"
-        android:background="@color/colorPrimary"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="80dp"
-        android:src="@drawable/splash"/>
-    <ImageView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="360dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_background"/>
+        android:background="@drawable/ic_background">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_background">
+    
+    <FrameLayout
+        android:layout_height="450dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="450dp"
+        android:background="@drawable/ic_background">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="I AM A..."
         android:textStyle="bold"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="135dp"
+        android:gravity="center"
+        android:layout_weight="1"
+
         android:textColor="@color/white"
         android:textSize="30dp"/>
-    <ImageButton
-        android:id="@+id/buyer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|left"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="30dp"
-        android:src="@drawable/ic_buyer"
-        android:background="@null"/>
-    <ImageButton
-        android:id="@+id/seller"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="50dp"
-        android:src="@drawable/ic_seller"
-        android:background="@null"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/buyer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:scaleType="fitXY"
+            android:paddingRight="15dp"
+            android:src="@drawable/ic_buyer"
+            android:background="@null"/>
+        <ImageButton
+            android:id="@+id/seller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_seller"
+            android:background="@null"/>
+    </LinearLayout>
+        </FrameLayout>
+        </FrameLayout>
+    </ScrollView>
 
 </FrameLayout>
