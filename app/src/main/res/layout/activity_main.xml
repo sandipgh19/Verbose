@@ -173,6 +173,16 @@
                 android:layout_marginTop="490dp"
                 android:orientation="horizontal">
 
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="hello"
+                    android:scaleType="centerInside"
+                    android:visibility="gone" />
+
                 <ImageButton
                     android:id="@+id/facebook"
                     android:layout_width="match_parent"

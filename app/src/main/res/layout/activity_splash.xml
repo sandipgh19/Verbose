@@ -3,11 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="0dp">
+    android:elevation="0dp"
+    android:background="@drawable/ic_background">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/ic_background">
 
         <FrameLayout

@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Verbose</string>
+    <string name="app_name">QuickDeal</string>
+
+    <string name="facebook_app_id">1831383270465249</string>
+    <string name="fb_login_protocol_scheme">fb1831383270465249</string>
+
 </resources>
