@@ -107,13 +107,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="350dp"
-                android:layout_gravity="center|top">
+                android:gravity="center">
 
                 <TextView
                     android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="115dp"
                     android:alpha=".4"
                     android:text="Forgot your "
                     android:textColor="@color/black"
@@ -206,10 +205,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
                 android:layout_marginTop="575dp"
-                android:layout_gravity="center|top"
-                android:orientation="horizontal">
+                android:gravity="center">
 
                 <TextView
                     android:id="@+id/text4"

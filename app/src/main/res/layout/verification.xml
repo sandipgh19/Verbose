@@ -118,7 +118,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="340dp">
+                android:layout_marginTop="340dp"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -127,7 +128,6 @@
                     android:textColor="@color/text_color"
                     android:textSize="15dp"
                     android:alpha=".7"
-                    android:layout_marginLeft="66dp"
                     android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
